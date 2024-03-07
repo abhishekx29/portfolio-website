@@ -69,10 +69,20 @@ section{
     color:var(--text-color);
     margin-left: 4rem;
     font-weight: 700;
+    position:relative;
 }
-.navbar a:hover,
-.header a:active{
-color: var(--text-color);
+.navbar a:before{
+    content: " ";
+    position:absolute;
+    top:0;
+    left:0;
+    width:00%;
+    height: 100%;
+    border-bottom: 5px solid crimson;
+    transition: .7s;
+}
+.navbar a:hover::before{
+    width: 100%;
 }
 
 #menu-icon{
